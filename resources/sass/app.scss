@@ -1,0 +1,35 @@
+//
+
+// General Style
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: cadetblue;
+    padding: 1rem 15%;
+
+}
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: darkgrey;
+    padding: 1rem 15%;
+}
+main{
+    min-height: calc(100vh - 180px);
+    width: 70%;
+    margin: 0 auto;
+    //debug
+    border: 1px solid red;
+
+    h1{
+        text-align: center;
+        margin: 1rem;
+    }
+}
