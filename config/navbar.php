@@ -7,7 +7,7 @@
 return [
     [
         'navName' => 'Home',
-        'navLink' => '/',
+        'navLink' => 'home',
     ],
     [
         'navName' => 'List',
