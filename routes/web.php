@@ -16,17 +16,13 @@ use App\Http\Controllers\HomeController;
 
 
 // Right now i'm deliberately NOT using a controller, will use it for CRUD
-Route::get('/', function(){
-    $comics = \App\Comic::all();
-    return view('home', compact('comics'));
-})->name('home');
+Route::get('/','HomeController@index')->name('home');
 // index
-Route::get('/list', function(){
-    return view('list');
-})->name('list');
-Route::get('/about', function(){
-    return view('about');
-})->name('about');
+Route::get('/list', 'HomeController@list')->name('list');
+Route::get('/about', 'HomeController@about')->name('about');
 
-// Route::get('/list', 'HomeController@list')->name('list');
-// Route::get('/about', 'HomeController@about')->name('about');
+// Here the CRUD ROUTES
+
+// You can manually create all the route or if you have followed laravel's conventions
+// Con can just pass this statis methos that take, the path and the name of Controller
+Route::resource('/comics', 'ComicsController');
