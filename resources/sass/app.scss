@@ -52,3 +52,34 @@ main{
         margin: 1rem;
     }
 }
+
+// table style
+.table {
+    border-collapse: collapse;
+    margin: 2rem auto;
+
+    th,td {
+        border: 1px solid black;
+        width: 150px;
+        // height: 75px;
+        padding: 0.25rem 0.5rem;
+    }
+    th {
+        background-color: cadetblue;
+    }
+    td {
+        background-color: blanchedalmond;
+    }
+    .td-btn {
+        width: 150px;
+        padding: 0;
+        text-align: center;
+        // height: 50px;
+        button{
+            // width: 30%;
+            height: 100%;
+            margin: 0;
+            padding: 0.25rem;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('/list', 'HomeController@list')->name('list');
-Route::get('/about', 'HomeController@about')->name('about');
+
+// Right now i'm deliberately NOT using a controller, will use it for CRUD
+Route::get('/', function(){
+    $comics = \App\Comic::all();
+    return view('home', compact('comics'));
+})->name('home');
+// index
+Route::get('/list', function(){
+    return view('list');
+})->name('list');
+Route::get('/about', function(){
+    return view('about');
+})->name('about');
+
+// Route::get('/list', 'HomeController@list')->name('list');
+// Route::get('/about', 'HomeController@about')->name('about');
