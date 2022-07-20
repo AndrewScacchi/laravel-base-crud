@@ -9,6 +9,27 @@ header {
   height: 80px;
   background-color: cadetblue;
   padding: 1rem 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul a {
+  text-decoration: none;
+  margin: 0 1rem;
+  padding: 0.75rem 1rem;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
 }
 
 footer {

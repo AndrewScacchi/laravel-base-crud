@@ -4,6 +4,6 @@
 
 @section('pageMain')
 <main>
-    <h1>Laravel Base Crud</h1>
+    <h1>List Page</h1>
 </main>
 @endsection
